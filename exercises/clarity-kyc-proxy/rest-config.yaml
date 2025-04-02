@@ -1,0 +1,12 @@
+apiDir: "../clarity-kyc-proxy-api/src/main/java"
+apiPackagePath: "com.clarityvisionsolutions.headless.kyc"
+application:
+    baseURI: "/clarity-kyc-proxy"
+    className: "ClarityKycProxyApplication"
+    name: "ClarityKycProxy"
+author: "dnebinger"
+clientDir: "../clarity-kyc-proxy-client/src/main/java"
+testDir: "../clarity-kyc-proxy-test/src/testIntegration/java"
+
+compatibilityVersion: 7
+forcePredictableOperationIds: true
