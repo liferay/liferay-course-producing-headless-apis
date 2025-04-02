@@ -77,7 +77,8 @@ paths:
                   name: id
                   required: true
                   schema:
-                      type: number
+                      format: int64
+                      type: integer
             responses:
                 200:
                     content:
@@ -96,7 +97,8 @@ paths:
                   name: id
                   required: true
                   schema:
-                      type: number
+                      format: int64
+                      type: integer
             requestBody:
                 content:
                     application/json:
