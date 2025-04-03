@@ -164,14 +164,17 @@ public class AbbreviatedDistributorAppResourceImpl
 	private String _getDistributorKycStatus(long id) throws Exception {
 		ObjectEntry objectEntry = _getDistributorKyc(id);
 
-		// these values come from the properties of the object entry
+		if (objectEntry != null) {
 
-		Map<String, Object> properties = objectEntry.getProperties();
+			// these values come from the properties of the object entry
 
-		if ((properties != null) && !properties.isEmpty()) {
-			return properties.get(
-				"kYCStatus"
-			).toString();
+			Map<String, Object> properties = objectEntry.getProperties();
+
+			if ((properties != null) && !properties.isEmpty()) {
+				return properties.get(
+					"kYCStatus"
+				).toString();
+			}
 		}
 
 		return "Unknown";
