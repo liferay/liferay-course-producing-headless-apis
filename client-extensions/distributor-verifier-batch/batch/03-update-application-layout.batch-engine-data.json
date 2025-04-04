@@ -96,10 +96,10 @@
 					},
 					{
 						"name": {
-							"en_US": "Validations"
+							"en_US": "Verifications"
 						},
 						"objectLayoutBoxes": [],
-						"objectRelationshipExternalReferenceCode": "APPLICATION_TO_VALIDATIONS",
+						"objectRelationshipExternalReferenceCode": "APPLICATION_TO_VERIFICATIONS",
 						"priority": 0
 					}
 				],

@@ -6,7 +6,7 @@
       "createStrategy": "INSERT",
       "onErrorFail": "ON_ERROR_FAIL",
       "updateStrategy": "UPDATE",
-      "externalReferenceCode": "D4B8_DISTRIBUTOR_VALIDATION"
+      "externalReferenceCode": "D4B8_DISTRIBUTOR_KYB_VERIFICATION"
     },
     "taskItemDelegateName": "DEFAULT"
   },
@@ -22,7 +22,7 @@
       },
       "type": "String",
       "required": false,
-      "externalReferenceCode": "APPLICATION_VALIDATION_BUSINESS_TYPE",
+      "externalReferenceCode": "APPLICATION_VERIFICATION_BUSINESS_TYPE",
       "indexedAsKeyword": false,
       "system": false,
       "indexedLanguageId": "en_US",
@@ -32,6 +32,32 @@
       "businessType": "Text",
       "readOnlyConditionExpression": ""
     },
+        {
+      "indexed": true,
+      "localized": false,
+      "objectFieldSettings": [
+        {
+          "name": "showCounter",
+          "value": false
+        }
+      ],
+      "readOnly": "false",
+      "DBType": "Clob",
+      "label": {
+        "en_US": "Business Address"
+      },
+      "type": "Clob",
+      "required": false,
+      "externalReferenceCode": "APPLICATION_VERIFICATION_BUSINESS_ADDRESS",
+      "indexedAsKeyword": false,
+      "system": false,
+      "indexedLanguageId": "en_US",
+      "unique": false,
+      "name": "businessAddress",
+      "state": false,
+      "businessType": "LongText",
+      "readOnlyConditionExpression": ""
+    },
     {
       "indexed": true,
       "localized": false,
@@ -39,16 +65,16 @@
       "readOnly": "false",
       "DBType": "String",
       "label": {
-        "en_US": "Verification Status"
+        "en_US": "KYB Verification Status"
       },
       "type": "String",
       "required": false,
-      "externalReferenceCode": "APPLICATION_VALIDATION_VERIFICATION_STATUS",
+      "externalReferenceCode": "APPLICATION_VERIFICATION_KYB_VERIFICATION_STATUS",
       "indexedAsKeyword": false,
       "system": false,
       "indexedLanguageId": "en_US",
       "unique": false,
-      "name": "verificationStatus",
+      "name": "kYBVerificationStatus",
       "state": false,
       "businessType": "Text",
       "readOnlyConditionExpression": ""
@@ -58,41 +84,46 @@
       "localized": false,
       "objectFieldSettings": [],
       "readOnly": "false",
-      "DBType": "Integer",
+      "DBType": "String",
       "label": {
-        "en_US": "Credit Score"
+        "en_US": "Business Registration State"
       },
-      "type": "Integer",
+      "type": "String",
       "required": false,
-      "externalReferenceCode": "APPLICATION_VALIDATION_CREDIT_SCORE",
+      "externalReferenceCode": "APPLICATION_VERIFICATION_BUSINESS_REGISTRATION_STATE",
       "indexedAsKeyword": false,
       "system": false,
       "indexedLanguageId": "",
       "unique": false,
-      "name": "creditScore",
+      "name": "businessRegistrationState",
       "state": false,
-      "businessType": "Integer",
+      "businessType": "Text",
       "readOnlyConditionExpression": ""
     },
     {
       "indexed": true,
       "localized": false,
-      "objectFieldSettings": [],
+      "objectFieldSettings": [
+        {
+          "name": "showCounter",
+          "value": false
+        }
+      ],
       "readOnly": "false",
-      "DBType": "String",
+      "DBType": "Clob",
       "label": {
-        "en_US": "Credit Risk Level"
+        "en_US": "KYB Response"
       },
-      "type": "String",
+      "type": "Clob",
       "required": false,
-      "externalReferenceCode": "APPLICATION_VALIDATION_CREDIT_RISK_LEVEL",
+      "externalReferenceCode": "APPLICATION_VERIFICATION_KYB_RESPONSE",
       "indexedAsKeyword": false,
       "system": false,
       "indexedLanguageId": "en_US",
       "unique": false,
-      "name": "creditRiskLevel",
+      "name": "kYBResponse",
       "state": false,
-      "businessType": "Text",
+      "businessType": "LongText",
       "readOnlyConditionExpression": ""
     }
   ]
