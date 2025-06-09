@@ -147,8 +147,19 @@ public class AbbreviatedDistributorAppResourceImpl
 		return abbreviatedDistributorApp;
 	}
 
-//Insert exercise code snippet here
-	
+	private ObjectEntry _getDistributorKyc(long id) throws Exception {
+		ObjectEntryResource objectEntryResource = _getObjectEntryResource(
+			"c_distributorkycverification", "C_DistributorKYCVerification");
+
+		BooleanFilter filter = new BooleanFilter();
+
+		filter.addRequiredTerm(
+			"r_applicationToKYC_c_distributorApplicationId", id);
+
+		return objectEntryResource.getObjectEntriesPage(
+			true, null, null, filter, null, null
+		).fetchFirstItem();
+	}
 
 	private String _getDistributorKycStatus(long id) throws Exception {
 		ObjectEntry objectEntry = _getDistributorKyc(id);
