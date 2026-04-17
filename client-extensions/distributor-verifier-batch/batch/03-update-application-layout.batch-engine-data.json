@@ -106,8 +106,7 @@
 				"objectDefinitionExternalReferenceCode": "D4B8_DISTRIBUTOR_APPLICATION",
 				"name": {
 					"en_US": "Basic Layout"
-				},
-				"defaultObjectLayout": true
+				}
 			}
 	]
 }
