@@ -147,19 +147,7 @@ public class AbbreviatedDistributorAppResourceImpl
 		return abbreviatedDistributorApp;
 	}
 
-	private ObjectEntry _getDistributorKyc(long id) throws Exception {
-		ObjectEntryResource objectEntryResource = _getObjectEntryResource(
-			"c_distributorkycverification", "C_DistributorKYCVerification");
-
-		BooleanFilter filter = new BooleanFilter();
-
-		filter.addRequiredTerm(
-			"r_applicationToKYC_c_distributorApplicationId", id);
-
-		return objectEntryResource.getObjectEntriesPage(
-			null, null, filter, null, null
-		).fetchFirstItem();
-	}
+//Insert exercise code snippet here
 	
 
 	private String _getDistributorKycStatus(long id) throws Exception {
