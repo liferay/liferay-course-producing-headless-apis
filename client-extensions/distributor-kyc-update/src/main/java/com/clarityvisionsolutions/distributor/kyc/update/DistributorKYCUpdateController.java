@@ -50,9 +50,10 @@ public class DistributorKYCUpdateController extends BaseRestController {
 
 	@PostMapping
 	public ResponseEntity<String> post(
-	@AuthenticationPrincipal Jwt jwt, @RequestBody String json) {
 
-	HttpStatus httpStatus = HttpStatus.OK;
+		@AuthenticationPrincipal Jwt jwt, @RequestBody String json) {
+
+		HttpStatus httpStatus = HttpStatus.OK;
 
 		try {
 			_log.info("Received JSON: " + json);

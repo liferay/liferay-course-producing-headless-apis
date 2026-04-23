@@ -3,9 +3,23 @@
 This repository contains the Mastering Producing Liferay's Headless APIs course materials.
 
 ## Table of Contents
-
+- [Available Branches](#available-branches)
 - [Bundle Preparation](#bundle-preparation)
 - [Starting and Stopping the Bundle](#starting-and-stopping-the-bundle)
+
+## Available Branches
+
+There are 2 branches available for the course.
+1. **main**: This branch is considered the starting branch for the course and can be used in conjunction with the course content and exercises
+2. **final**: This branch is considered the final branch in which the final course content and exercises have been completed
+
+In the **final** branch, all Liferay Client Extensions have been auto-deployed. However, the The *distributor-kyc-update* microservice will still need to be started in order to reproduce the Bridging Microservice Exercise.
+
+1. Open a terminal and navigate to the *client-extensions/distributor-kyc-update/* folder.
+2. Start the Spring Boot service (as the microservice is hosted outside of Liferay): 
+```
+   blade gw bootRun
+   ```
 
 ## Bundle Preparation
 
