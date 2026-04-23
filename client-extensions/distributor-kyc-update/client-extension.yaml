@@ -1,0 +1,15 @@
+assemble:
+    - fromTask: bootJar
+clarity-distributor-kyc-update:
+    name: Clarity Distributor KYC Update
+    oAuth2ApplicationExternalReferenceCode: clarity-distributor-kyc-update-oauth-application-user-agent
+    resourcePath: /distributor/kyc/update
+    type: objectAction
+clarity-distributor-kyc-update-oauth-application-user-agent:
+    .serviceAddress: localhost:58081
+    .serviceScheme: http
+    name: Clarity Distributor KYC Update OAuth Application User Agent
+    scopes:
+        - c_distributorapplication.everything
+        - c_distributorkycverification.everything
+    type: oAuthApplicationUserAgent

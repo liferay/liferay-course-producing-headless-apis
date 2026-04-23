@@ -1,0 +1,7 @@
+dependencies {
+	api project(":modules:clarity-kyc-proxy:clarity-kyc-proxy-api")
+
+	compileOnly group: "com.liferay.portal", name: "release.dxp.api"
+}
+
+group = "com.clarityvisionsolutions.headless.kyc"
