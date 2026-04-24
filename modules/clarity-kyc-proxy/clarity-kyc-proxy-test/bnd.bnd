@@ -1,0 +1,5 @@
+Bundle-Name: clarity-kyc-proxy-test
+Bundle-SymbolicName: com.clarityvisionsolutions.headless.kyc.test
+Bundle-Version: 1.0.0
+-includeresource: com.clarityvisionsolutions.headless.kyc.client.jar=../clarity-kyc-proxy-client/build/libs/com.clarityvisionsolutions.headless.kyc.client-1.0.0.jar;lib:=true
+-provider-policy: ${replacestring;${range;[==,==]};.*,(.*)];$1}

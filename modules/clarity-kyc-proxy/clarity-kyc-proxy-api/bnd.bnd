@@ -1,0 +1,6 @@
+Bundle-Name: clarity-kyc-proxy-api
+Bundle-SymbolicName: com.clarityvisionsolutions.headless.kyc.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.clarityvisionsolutions.headless.kyc.dto.v1_0,\
+	com.clarityvisionsolutions.headless.kyc.resource.v1_0

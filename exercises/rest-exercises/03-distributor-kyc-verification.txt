@@ -8,6 +8,6 @@
 			"r_applicationToKYC_c_distributorApplicationId", id);
 
 		return objectEntryResource.getObjectEntriesPage(
-			true, null, null, filter, null, null
+			null, null, filter, null, null
 		).fetchFirstItem();
 	}

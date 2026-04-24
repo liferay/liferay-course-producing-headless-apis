@@ -1,0 +1,125 @@
+components:
+    schemas:
+        AbbreviatedDistributorApp:
+            properties:
+                businessName:
+                    type: string
+                erc:
+                    type: string
+                id:
+                    format: int64
+                    type: integer
+                kycStatus:
+                    type: string
+                taxId:
+                    type: string
+            type: object
+info:
+    description: "ClarityKycProxy REST API"
+    license:
+        name: "Apache 2.0"
+        url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+    title: "ClarityKycProxy"
+    version: v1.0
+openapi: 3.0.1
+paths:
+    /abbreviated-distributor-app/erc/{erc}:
+        get:
+            operationId: getAbbreviatedDistributorAppErc
+            parameters:
+                - in: path
+                  name: erc
+                  required: true
+                  schema:
+                      type: string
+            responses:
+                200:
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/AbbreviatedDistributorApp"
+                        application/xml:
+                            schema:
+                                $ref: "#/components/schemas/AbbreviatedDistributorApp"
+            summary: Get AbbreviatedDistributorApp by ERC
+        patch:
+            operationId: patchAbbreviatedDistributorAppErc
+            parameters:
+                - in: path
+                  name: erc
+                  required: true
+                  schema:
+                      type: string
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: "#/components/schemas/AbbreviatedDistributorApp"
+                    application/xml:
+                        schema:
+                            $ref: "#/components/schemas/AbbreviatedDistributorApp"
+                required: true
+            responses:
+                200:
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/AbbreviatedDistributorApp"
+                        application/xml:
+                            schema:
+                                $ref: "#/components/schemas/AbbreviatedDistributorApp"
+                    description:
+                        Successful response
+            summary: Update AbbreviatedDistributorApp by ERC
+    /abbreviated-distributor-app/id/{id}:
+        get:
+            operationId: getAbbreviatedDistributorAppId
+            parameters:
+                - in: path
+                  name: id
+                  required: true
+                  schema:
+                      format: int64
+                      type: integer
+            responses:
+                200:
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/AbbreviatedDistributorApp"
+                        application/xml:
+                            schema:
+                                $ref: "#/components/schemas/AbbreviatedDistributorApp"
+                    description:
+                        Successful response
+            summary: Get AbbreviatedDistributorApp by ID
+        patch:
+            operationId: patchAbbreviatedDistributorAppId
+            parameters:
+                - in: path
+                  name: id
+                  required: true
+                  schema:
+                      format: int64
+                      type: integer
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: "#/components/schemas/AbbreviatedDistributorApp"
+                    application/xml:
+                        schema:
+                            $ref: "#/components/schemas/AbbreviatedDistributorApp"
+                required: true
+            responses:
+                200:
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/AbbreviatedDistributorApp"
+                        application/xml:
+                            schema:
+                                $ref: "#/components/schemas/AbbreviatedDistributorApp"
+                    description:
+                        Successful response
+            summary: Update AbbreviatedDistributorApp by ID
